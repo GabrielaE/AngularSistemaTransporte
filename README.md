@@ -15,15 +15,19 @@ Este sistema ha sido creado con base a los siguientes requerimientos:
 3. Se debe tener la posibilidad de crear, consultar, modificar, y listar los vehículos
 4. Se requiere tener un cálculo de la cantidad de combustible necesaria para llenar todos los abastos, en litros y galones. 
 
-# Funcionamiento
+# Funcionamiento del aplicativo
+Se requiere instalar: Visual Studio Code, Node.js, angular cli
+Por medio de Visual Studio Code abrir el proyecto SistemaTransporte, en el terminal ejecutar ng serve para subir la aplicación
+En el navegador acceder a http://localhost:4200/
 
+De acuerdo al requerimiento #3, se especifica lo siguiente:
 1. Crear
 - Ingresar en los datos en el formulario
 - Clic en Crear
 2. Consultar
 - Ingresar un id (número inicial es 1)
 - Clic en Consultar
-- Los datos se visualizan en ek formulario
+- Los datos se visualizan en el formulario
 3. Editar
 - A partir del punto 2, proceder a modificar los datos necesarios
 - Clic en Editar
