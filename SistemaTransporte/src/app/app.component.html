@@ -1,0 +1,93 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<alert type="success">SystemTransport</alert>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li 
+          *ngFor="let transporte of transporteArray"
+          class="list-group-item list-group-item-action"
+        >
+        <div>
+          <span class="badge badge-primary">{{transporte.id}}</span> <br>
+          <strong><label for="name">Tipo: </label></strong> {{transporte.Tipo}} <br>
+          <strong><label for="name">Marca: </label></strong> {{transporte.Marca}} <br>
+          <strong><label for="name">Modelo: </label></strong> {{transporte.Modelo}} <br>
+          <strong><label for="name">Año de Fabricación: </label></strong> {{transporte.AnioFab}} <br>
+          <strong><label for="name">Capacidad de Tanque: </label></strong> {{transporte.CapacidadTanque}} <br>
+          <strong><label for="name">Número de Pasajeros: </label></strong> {{transporte.NumPasajeros}} <br>
+          <strong><label for="name">Capacidad de Carga: </label></strong> {{transporte.CapacidadCarga}} 
+        </div>
+        </li>
+      </ul>
+      <div class="card mt-4">
+        <div class="card-body">
+            <div style="text-align:center" class="card-tittle">
+              <h2>Crear un nuevo registro de transporte</h2>
+            </div>
+
+            <form action="">
+            <br> <br>
+            <div class="row ml-1">
+              <div class="col-xs-3">
+                <select (change)="seleccionDrop ($event)" class="form-control">
+                    <option value="seleccione" disabled="disabled"> Seleccione </option>
+                    <option value="moto"> moto </option>
+                    <option value="automóvil"> automóvil </option>
+                    <option value="camioneta"> camioneta </option>
+                    <option value="todoterreno"> todoterreno </option>
+                    <option value="van"> van </option>
+                    <option value="bus"> bus </option>
+                    <option value="camión"> camión </option>
+                  </select>
+                  
+                </div></div>
+                </form>
+               
+            <div class="form-group">
+              <br>
+              <input type="text" [(ngModel)]="seleccionTransporte.Marca" placeholder="Ingrese la marca" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="seleccionTransporte.Modelo" placeholder="Ingrese el modelo" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="seleccionTransporte.AnioFab" placeholder="Ingrese el año de fabricación" class="form-control"> 
+            </div>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="seleccionTransporte.CapacidadTanque" placeholder="Ingrese la capacidad del tanque en litros" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="seleccionTransporte.NumPasajeros" placeholder="Ingrese el número de pasajeros" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="seleccionTransporte.CapacidadCarga" placeholder="Ingrese la capacidad de carga" class="form-control">
+            </div>
+            <button (click)="BtnCrear()" class="btn btn-primary" >
+              Crear
+            </button>
+            <button (click)="BtnEditar()" class="btn btn-primary ml-2" >
+              Editar
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mt-4">
+      <img width="300" alt="imgSistemaTransport" src="http://www.rh-shipping.com/img/IT/gestion.jpg">
+      <strong><label>Ingrese el identificador del transporte:
+        <input type="text" [(ngModel)]="idText" name="idText" required ng-trim="true">
+      </label></strong>
+      <button (click)="Consultar()"  class="btn btn-primary">
+        Consultar
+      </button>
+
+    <br><br>
+    <strong><label>Cantidad de combustible necesario en litros: </label> </strong> {{litros}}
+    <br><br>
+    <strong><label>Cantidad de combustible necesario en galones: </label></strong>{{galones}}
+    
+  </div>
+</div>
